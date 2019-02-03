@@ -28,8 +28,6 @@ class Inkscape < Formula
   depends_on "gtkmm3"
   depends_on "gdl"
 
-  needs :cxx11
-
   if MacOS.version < :mavericks
     fails_with :clang do
       cause "inkscape's dependencies will be built with libstdc++ and fail to link."
