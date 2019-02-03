@@ -37,6 +37,7 @@ class Inkscape < Formula
   def install
     ENV.cxx11
     ENV.append "LDFLAGS", "-liconv"
+    ENV.append "LDFLAGS", "-lpoppler"
 
     system "mkdir", "build"
     Dir.chdir("build")
